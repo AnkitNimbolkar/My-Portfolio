@@ -5,6 +5,7 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  background-color: var(--primary-color);
 }
 
 html {
@@ -12,7 +13,7 @@ html {
 }
 
 p {
-  color: rgb(85, 85, 85);
+  color: var(--secondary-color);
 }
 
 a,
@@ -38,24 +39,55 @@ nav {
 }
 
 a {
-  color: black;
+  color: var(--secondary-color);
   text-decoration: none;
-  text-decoration-color: white;
+  text-decoration-color: var(--primary-color);
 }
 
 a:hover {
-  color: grey;
+  color: var(--quad-color);
   text-decoration: underline;
   text-underline-offset: 1rem;
-  text-decoration-color: rgb(181, 181, 181);
+  text-decoration-color: var(--quad-color);
 }
 
 .logo {
   font-size: 2rem;
+  color: var(--secondary-color);
 }
 
 .logo:hover {
   cursor: default;
+}
+.logo1 {
+  font-size: 2rem;
+  color: var(--secondary-color);
+}
+
+.logo1:hover {
+  cursor: default;
+}
+
+/* DARK MODE */
+:root {
+  --primary-color: rgb(255, 255, 255);
+  --secondary-color: rgb(0, 0, 0);
+  --tertiary-color: rgb(53, 53, 53);
+  --quad-color: rgb(181, 181, 181);
+  --normal: invert(0);
+}
+
+.dark-theme {
+  --primary-color: rgb(33, 33, 33);
+  --secondary-color: rgb(255, 255, 255);
+  --tertiary-color: rgb(255, 255, 255);
+  --quad-color: rgb(85, 85, 85);
+  --normal: invert(100%);
+}
+
+#icon {
+  cursor: pointer;
+  width: 2rem;
 }
 
 /*HAMBURGER NAV*/
@@ -81,7 +113,7 @@ a:hover {
 .hamburger-icon span {
   width: 100%;
   height: 1.5px;
-  background-color: black;
+  background-color: var(--secondary-color);
   transition: all 0.3 ease-in-out;
 }
 
@@ -89,7 +121,7 @@ a:hover {
   position: absolute;
   top: 100%;
   right: 0;
-  background-color: white;
+  background-color: var(--primary-color);
   width: fit-content;
   max-height: 0;
   overflow: hidden;
@@ -105,7 +137,7 @@ a:hover {
   padding: 10px;
   text-align: center;
   font-size: 1.25rem;
-  color: black;
+  color: var(--secondary-color);
   text-decoration: none;
   transition: all 0.3 ease-in-out;
 }
@@ -189,6 +221,7 @@ section {
 .title {
   font-size: 3rem;
   text-align: center;
+  color: var(--secondary-color);
 }
 
 #socials-container {
@@ -219,7 +252,8 @@ section {
 
 .btn-color-1,
 .btn-color-2 {
-  border: rgb(53, 53, 53) 0.1rem solid;
+  border: var(--secondary-color) 0.1rem solid;
+  color: var(--secondary-color);
 }
 
 .btn-color-1:hover,
@@ -229,12 +263,12 @@ section {
 
 .btn-color-1,
 .btn-color-2:hover {
-  background: rgb(53, 53, 53);
-  color: white;
+  background: var(--tertiary-color);
+  color: var(--primary-color);
 }
 
 .btn-color-1:hover {
-  background: rgb(53, 53, 53);
+  background: var(--secondary-color);
 }
 
 .btn-color-2 {
@@ -242,7 +276,7 @@ section {
 }
 
 .btn-color-2:hover {
-  border: rgb(255, 255, 255) 0.1rem solid;
+  border: var(--primary-color) 0.1rem solid;
 }
 
 .btn-container {
@@ -284,10 +318,10 @@ section {
 .details-container {
   padding: 1.5rem;
   flex: 1;
-  background: white;
+  background: var(--primary-color);
   border-radius: 2rem;
-  border-color: rgb(163, 163, 163);
-  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: var(--secondary-color);
+  border: var(--tertiary-color) 0.1rem solid;
   text-align: center;
 }
 
@@ -300,4 +334,127 @@ section {
   height: 400px;
   width: 400px;
   margin: auto 0;
+}
+
+h3 {
+  color: var(--secondary-color);
+}
+
+/* EXPERIENCE SECTION */
+
+#experience {
+  position: relative;
+}
+
+.experience-sub-title {
+  color: var(--secondary-color);
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.experience-details-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.article-container {
+  display: flex;
+  text-align: initial;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 1.5rem;
+  justify-content: space-around;
+}
+
+article {
+  display: flex;
+  width: 10rem;
+  justify-content: space-around;
+  gap: 0.5rem;
+}
+
+article.icon {
+  cursor: default;
+}
+
+/* PROJECTS SECTION */
+
+#project {
+  position: relative;
+}
+
+.color-container {
+  border-color: var(--secondary-color);
+  background: var(--primary-color);
+}
+
+.project-img {
+  border-radius: 2rem;
+  height: 90%;
+  width: 90%;
+}
+
+.project-title {
+  margin: 1rem;
+  color: var(--secondary-color);
+}
+
+.project.btn {
+  border-color: var(--secondary-color);
+  color: var(--secondary-color);
+}
+
+/*CONTACT SECTION*/
+
+#contact {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 70vh;
+}
+
+.contact-info-upper-container {
+  display: flex;
+  justify-content: center;
+  border-radius: 2rem;
+  border: var(--tertiary-color) 0.1rem solid;
+  border-color: var(--secondary-color);
+  background: var(--primary-color);
+  margin: 2rem auto;
+  padding: 0.5rem;
+}
+
+.contact-info-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 0.5rem;
+}
+
+.contact-info-container p {
+  font-size: larger;
+}
+
+.contact-icon {
+  cursor: default;
+}
+
+.email-icon {
+  height: 2.5rem;
+}
+
+footer {
+  height: 26vh;
+  margin: 0 1rem;
+}
+
+footer p {
+  text-align: center;
+}
+
+#icone-invert {
+  filter: var(--normal);
 }
